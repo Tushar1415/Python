@@ -8,9 +8,11 @@ import time
 options = Options()
 options.headless = True
 driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
+
 #driver = webdriver.Chrome()
 #driver.maximize_window()
 driver.get("https://unifiedportal-mem.epfindia.gov.in/memberinterface/")
+
 string_path = "D:\\Captcha\\Captcha"
 i = 10313
 while i < 20001:
@@ -20,6 +22,7 @@ while i < 20001:
 		driver.refresh();
 		i += 1
 driver.close()
+
 #element = driver.find_element_by_id("userName")
 #element.send_keys(user_name)
 #element = driver.find_element_by_id("password")
