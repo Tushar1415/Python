@@ -5,17 +5,17 @@ from selenium.webdriver.common.keys import Keys
 import time
 #user_name = "100156819901"
 #password = "Champ@2018"
-options = Options()
-options.headless = True
-driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
+#options = Options()
+#options.headless = True
+#driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
 
-#driver = webdriver.Chrome()
+driver = webdriver.Chrome()
 #driver.maximize_window()
 driver.get("https://unifiedportal-mem.epfindia.gov.in/memberinterface/")
 
-string_path = "D:\\Captcha\\Captcha"
-i = 10313
-while i < 20001:
+string_path = "D:\\Captcha1\\Captcha"
+i = 1
+while i < 100:
 	string_path1 = string_path + str(i) + ".png"
 	with open(string_path1, 'wb') as file:
 		file.write(driver.find_element_by_xpath("/html/body/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div/form/div[4]/div[1]/div/img").screenshot_as_png)
